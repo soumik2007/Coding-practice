@@ -3,9 +3,9 @@ from datetime import date
 today = date.today()
 import streamlit as st 
 st.title("Age Finder 🤔")
-
+st.subheader("Write Your Date of Birth ✍🏻")
 dob = st.date_input(
-    "Write Your Date of Birth",      
+    "Your Date of Birth 🗓️",      
     min_value=date(1900, 1, 1),         
     max_value=date.today()            
 )
@@ -13,7 +13,7 @@ today = date.today()
 
 days_lived = (today - dob).days
 age = days_lived//365
-st.write("Your Age:", age)
+st.subheader(f"Your Age: {age}")
 
 st.markdown(
     """
